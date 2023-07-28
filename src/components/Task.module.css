@@ -1,0 +1,184 @@
+.taskForm {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  
+  width: 100%;
+
+  position: relative;
+  top: -1.625rem;
+}
+
+.taskForm input {
+  width: 39.875rem;
+  padding: 1rem;
+  
+  color: var(--gray-300);
+  background: var(--gray-500);
+  border: solid 0.0625rem var(--gray-700);
+  border-radius: 0.5rem;
+}
+
+
+.taskForm input[type=text]:hover {
+  border: solid 0.0625rem var(--gray-700);
+}
+
+.taskForm div button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: 5.625rem;
+  height: 3.25rem;
+  
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.225rem;
+  background: var(--blue-700);
+
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.tasks, .tasksList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.taskIndicator{
+  display: flex;
+  justify-content: space-between;
+  
+  width: 46rem;
+  margin-top: 4rem;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.taskCreated, .taskCompleted {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.taskCreated p {
+  color: var(--blue-200);
+}
+
+
+.taskCompleted p {
+  color: var(--purple-400);
+}
+
+.count{
+  padding: 0.125rem 0.5rem;
+
+  color: var(--gray-200);
+  background: var(--gray-500);
+  border-radius: 999px;
+}
+
+.taskContainer {
+  width: 46rem;
+
+  margin-top: 1.5rem;
+}
+.taskEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-top: 0.0625rem solid var(--gray-500);
+  border-radius: 0.5rem;
+
+  color: var(--gray-300);
+}
+
+.hasTask {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.taskEmpty > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 4rem;
+  gap: 1rem;  
+}
+
+.taskEmpty div p:nth-child(odd) {
+  font-weight: 700;
+}
+
+.tasksList ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  
+  width: 100%;
+
+
+}
+
+.tasksList .task {
+  list-style: none;
+
+  height: 4.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 8px;
+
+  background: var(--gray-600)
+}
+
+.tasksList .task div {
+  display: flex;
+  width: 100%;
+}
+
+.tasksList .task .taskText {
+ font-size: 0.875rem; 
+ color: var(--gray-100);
+}
+
+.tasksList .taskTrue .taskText {
+  font-size: 0.875rem;
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.tasksList .task button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  background: var(--gray-600);
+  border: 0;
+  
+}
+
+.tasksList .task .iconCheck {
+  color: var(--blue-200);
+}
+
+.tasksList .task .iconDelete {
+  color: var(--gray-300);
+}
+
+.tasksList .task .iconDelete:hover {
+  color: var(--red-200);
+  transition: color .5s ease;
+}
+
+.tasksList .taskTrue .iconCheck{
+  background: radial-gradient(var(--gray-200), var(--gray-200), var(--gray-200)) ;
+  background-repeat: no-repeat;
+  background-size: 8px 8px;
+  background-position: center;
+  color: var(--purple-400);
+}
