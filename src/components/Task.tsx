@@ -150,7 +150,7 @@ export function Task() {
 
                   if (task.conclude) {
                     return(
-                      <li className={styles.task}>
+                      <li key={task.id} className={styles.task}>
                         <div className={styles.taskTrue}>
                           <button id={task.id} onClick={handleCheckCompleteTask} className={styles.iconCheck}>
                             <CheckCircle weight='fill' size={17.45}/>
@@ -166,7 +166,7 @@ export function Task() {
                     )
                   }else{
                     return(
-                      <li className={styles.task}>
+                      <li key={task.id} className={styles.task}>
                         <div className={styles.taskFalse}>
 
                           <button id={task.id} onClick={handleCheckCompleteTask} className={styles.iconCheck}>
