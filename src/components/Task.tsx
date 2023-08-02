@@ -39,8 +39,6 @@ export function Task() {
       ]
     );
     setNewTask({id: '', task: '', conclude: false});
-
-    console.log(tasks)
   }
 
   function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
@@ -54,11 +52,9 @@ export function Task() {
   }
 
   function testeTasks(){
-  console.log(tasks);
   }
 
   function handleCheckCompleteTask(event: MouseEvent<HTMLButtonElement>){
-    console.log(event.currentTarget.id)
     const changeTask = tasks.map(function(task){
       if(task.id == event.currentTarget.id){
 
@@ -70,7 +66,6 @@ export function Task() {
       }
       return task
     })
-    console.log(changeTask);
     setTasks(changeTask);
   }
 
